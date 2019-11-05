@@ -24,7 +24,9 @@ public class ProductsController{
     @GetMapping(path = "/get-products-list", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ResponseData> getProductsList() {
         List<ProductsEntity> productsList = productsService.getAllProductsList();
-        return ResponseEntity.ok(ResponseData.success(productsList));
+        // return ResponseEntity.ok(ResponseData.success(productsList));
+
+        return null;
     }
 
 }

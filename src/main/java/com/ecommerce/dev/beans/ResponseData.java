@@ -7,17 +7,11 @@ import java.util.List;
 
 @Data
 public class ResponseData {
-    private boolean status;
-    private String responseCode;
-    private List<ProductsEntity> productsData;
+    public boolean status;
+    public String responseCode;
+    public String responseType;
+    public String message;
 
-    public static synchronized ResponseData success(List<ProductsEntity> productsEntities){
-        ResponseData responseData = new ResponseData();
-        responseData.setStatus(true);
-        responseData.setResponseCode("0");
-        responseData.setProductsData(productsEntities);
 
-        return responseData;
-    }
 
 }

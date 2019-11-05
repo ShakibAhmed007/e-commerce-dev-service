@@ -12,12 +12,12 @@ public class RegistrationService {
     @Autowired
     private CompanyDAO companyDAO;
 
-    public String saveCompanyRegistrationData(CompanyRegistrationRequestDTO companyRegistrationRequestData){
+    public boolean saveCompanyRegistrationData(CompanyRegistrationRequestDTO companyRegistrationRequestData){
         try {
             return companyDAO.saveComapnyregistrationData(companyRegistrationRequestData.getOrganizationEntity());
         }catch(Exception e){
             e.printStackTrace();
-            return e.toString();
+            return false;
         }
 
     }

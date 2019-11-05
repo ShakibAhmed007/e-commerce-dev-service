@@ -12,10 +12,10 @@ public class CompanyDAO {
     private CompanyRepository companyRepository;
 
 
-    public String saveComapnyregistrationData(OrganizationEntity companyEntity) throws Exception {
+    public boolean saveComapnyregistrationData(OrganizationEntity companyEntity) throws Exception {
         if(companyRepository != null) {
             companyRepository.save(companyEntity);
         }
-        return "Succesfully Saved";
+        return true;
     }
 }
