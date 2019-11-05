@@ -1,17 +1,10 @@
 package com.ecommerce.dev.repository;
 
-import com.ecommerce.dev.entity.CompanyEntity;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+import com.ecommerce.dev.entity.OrganizationEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Optional;
-
 @Repository
-public interface CompanyRepository extends JpaRepository<CompanyEntity, Long> {
+public interface CompanyRepository extends JpaRepository<OrganizationEntity, Long> {
 
 }
