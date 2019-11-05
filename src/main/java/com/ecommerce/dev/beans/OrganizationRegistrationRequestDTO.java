@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class CompanyRegistrationRequestDTO {
+public class OrganizationRegistrationRequestDTO {
 
     @JsonProperty(value = "request_type")
     private String requestType;

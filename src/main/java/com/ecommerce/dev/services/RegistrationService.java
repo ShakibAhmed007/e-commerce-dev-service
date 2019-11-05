@@ -1,7 +1,7 @@
 package com.ecommerce.dev.services;
 
 
-import com.ecommerce.dev.beans.CompanyRegistrationRequestDTO;
+import com.ecommerce.dev.beans.OrganizationRegistrationRequestDTO;
 import com.ecommerce.dev.dao.CompanyDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class RegistrationService {
     @Autowired
     private CompanyDAO companyDAO;
 
-    public boolean saveCompanyRegistrationData(CompanyRegistrationRequestDTO companyRegistrationRequestData){
+    public boolean saveCompanyRegistrationData(OrganizationRegistrationRequestDTO companyRegistrationRequestData){
         try {
             return companyDAO.saveComapnyregistrationData(companyRegistrationRequestData.getOrganizationEntity());
         }catch(Exception e){

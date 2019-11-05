@@ -1,7 +1,7 @@
 package com.ecommerce.dev.controller;
 
 
-import com.ecommerce.dev.beans.CompanyRegistrationRequestDTO;
+import com.ecommerce.dev.beans.OrganizationRegistrationRequestDTO;
 import com.ecommerce.dev.beans.OrganizationRegistrationReponseDTO;
 import com.ecommerce.dev.services.RegistrationService;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -23,7 +23,7 @@ public class RegistrationController {
     private ObjectMapper mapper;
 
     @PostMapping(value = "/register-organization")
-    public JsonNode registerCompany(@Valid @RequestBody CompanyRegistrationRequestDTO companyRegistrationRequestData){
+    public JsonNode registerCompany(@Valid @RequestBody OrganizationRegistrationRequestDTO companyRegistrationRequestData){
         JsonNode node = mapper.convertValue(
                 OrganizationRegistrationReponseDTO.processResponseType(
                         registrationService.saveCompanyRegistrationData(
